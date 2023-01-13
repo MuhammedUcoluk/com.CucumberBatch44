@@ -18,11 +18,9 @@ public class HotelMyCampStepDefinitions {
         hotelMyCampPages.siteyeilerleSekmesiElementi.click();
     hotelMyCampPages.ilkLoginLinki.click();
     }
-    @Then("kullanici adi olarak {string} girer")
-    public void kullanici_adi_olara_girer(String kullaniciTipi) {
-        hotelMyCampPages.usernameBox.sendKeys(ConfigReader.getProperty(kullaniciTipi));
 
-    }
+
+
     @Then("password olarak {string} girer")
     public void password_olarak_girer(String passwordTuru) {
         hotelMyCampPages.passwordBox.sendKeys(ConfigReader.getProperty(passwordTuru));
@@ -54,4 +52,11 @@ public class HotelMyCampStepDefinitions {
     public void scenarioOutlineDanPasswordOlarakYazar(String password) {
         hotelMyCampPages.passwordBox.sendKeys(password);
     }
+
+    @Then("kullanici adi olara {string} girer")
+    public void kullanici_adi_olara_girer(String kullaniciTipi) {
+        hotelMyCampPages.usernameBox.sendKeys(ConfigReader.getProperty(kullaniciTipi));
+    }
+
+
 }

@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin={"html:target\\cucumber-reports.html"},
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Editor",
-        dryRun = true //eksik adımları bulmak istiyorsak true, normal test için false
+        tags = "@Demoqa",
+        dryRun = false //eksik adımları bulmak istiyorsak true, normal test için false
 )
 
 public class Runner {
